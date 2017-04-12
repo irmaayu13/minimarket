@@ -43,25 +43,7 @@ public class Gudang {
 
 
 
-    /*  jika method main() ini dijalankan hasilnya:
-
-        Print isi Gudang:
-        Id:1
-        Nama:Nasi Goreng
-        Harga produksi:5
-        Harga jual:10
-        Id:2
-        Nama:Soto ayam
-        Harga produksi:3
-        Harga jual:7
-        Id:3
-        Nama:Air mineral
-        Harga produksi:2
-        Harga jual:4
-
-
-    */
-
+   
     public static void main(String[] args) {
         //testing, tambah Gudang (nantinya bisa dari database)
         System.out.println("**** test class Gudang **** ");
