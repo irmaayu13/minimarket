@@ -1,0 +1,85 @@
+import java.util.Calendar;
+import java.util.HashMap;
+
+/**
+ * Created by Toshiba on 4/11/2017.
+ */
+public class Gudang {
+    String kode;
+    int stok;
+    Calendar cal = Calendar.getInstance();
+    String keterangan;
+    private HashMap<Integer, Produk> arrProduk = new HashMap<>();
+
+    /*
+         tambah Produk ke arrProduk
+     */
+
+    public void addStock(Produk itm) {
+        arrProduk.put(itm.id,itm);
+    }
+
+    public void print() {
+        //print semua Produk
+        for (Produk itm:arrProduk.values()) {
+            itm.print();
+        }
+    }
+
+    public void isiGudang() {
+        //nanti bisa diisi dari database, untuk sekarang disii manual dulu untuk test
+        addStock(new Produk(1,"Nasi Goreng",5,10));
+        addStock(new Produk(2,"Soto ayam",3,7));
+        addStock(new Produk(3,"Air mineral",2,4));
+    }
+
+    /*
+      cari objek Produk di arProduk Produk berdasarkan id
+    */
+    public Produk cari(int ProdukId) {
+        //Produk = arrProduk.
+        return arrProduk.get(ProdukId);
+    }
+
+
+
+    /*  jika method main() ini dijalankan hasilnya:
+
+        Print isi Gudang:
+        Id:1
+        Nama:Nasi Goreng
+        Harga produksi:5
+        Harga jual:10
+        Id:2
+        Nama:Soto ayam
+        Harga produksi:3
+        Harga jual:7
+        Id:3
+        Nama:Air mineral
+        Harga produksi:2
+        Harga jual:4
+
+
+    */
+
+    public static void main(String[] args) {
+        //testing, tambah Gudang (nantinya bisa dari database)
+        System.out.println("**** test class Gudang **** ");
+
+        Gudang m = new Gudang();
+        m.isiGudang();
+        System.out.println("===> Testing Print isi Gudang:");
+        m.print();
+
+        System.out.println("===> Testing cari Produk:");
+        Produk itm = m.cari(2); //cari Produk 2
+        if (itm != null) {
+            System.out.println("DProdukukan!");
+            itm.print(); //hasilnya print Produk 2
+        } else {
+            System.out.println("Tidak DProdukukan");
+        }
+
+    }
+
+}
