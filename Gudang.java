@@ -2,7 +2,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 /**
- * Created by Toshiba on 4/11/2017.
+ * Created by Toshiba on 4/12/2017.
  */
 public class Gudang {
     String kode;
@@ -16,7 +16,8 @@ public class Gudang {
      */
 
     public void addStock(Produk itm) {
-        arrProduk.put(itm.id,itm);
+
+        arrProduk.put(itm.idProduk,itm);
     }
 
     public void print() {
@@ -28,9 +29,8 @@ public class Gudang {
 
     public void isiGudang() {
         //nanti bisa diisi dari database, untuk sekarang disii manual dulu untuk test
-        addStock(new Produk(1,"Nasi Goreng",5,10));
-        addStock(new Produk(2,"Soto ayam",3,7));
-        addStock(new Produk(3,"Air mineral",2,4));
+        addStock(new Produk(1,"Indomie","Mie Instan",2500,40,"Makanan"));
+        addStock(new Produk(2,"Ultramilk","Susu",5000,10,"Minuman"));
     }
 
     /*
