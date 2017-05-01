@@ -1,7 +1,7 @@
 /**
  * Created by IRNANDA on 12/04/2017.
  */
-public class bill {
+public class Bill {
     String idpetugas;
     String idproduk;
     String namaproduk;

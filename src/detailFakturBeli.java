@@ -3,13 +3,13 @@ import java.util.ArrayList;
 /**
  * Created by Rima Yuliana on 01/05/2017.
  */
-public class detailFakturBeli extends FakturBeli {
+public class DetailFakturBeli extends FakturBeli {
     String no_fakturbeli;
     int jumlah_fakturbeli;
     String tgl_masuk;
     ArrayList<Produk> daftarProduk = new ArrayList<>();
 
-    public detailFakturBeli(String no_fakturbeli, int jumlah_fakturbeli, String tgl_masuk){
+    public DetailFakturBeli(String no_fakturbeli, int jumlah_fakturbeli, String tgl_masuk){
         this.no_fakturbeli=no_fakturbeli;
         this.jumlah_fakturbeli=jumlah_fakturbeli;
         this.tgl_masuk=tgl_masuk;
@@ -32,7 +32,7 @@ public class detailFakturBeli extends FakturBeli {
     }
 
     public static void main(String[] args){
-        detailFakturBeli dfb = new detailFakturBeli("FB001",250,"02-04-2017");
+        DetailFakturBeli dfb = new DetailFakturBeli("FB001",250,"02-04-2017");
         dfb.print();
     }
 }
