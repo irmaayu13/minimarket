@@ -7,7 +7,7 @@ public class DetailFaktur extends FakturBeli {
         String no_fakturbeli;
         int jumlah_fakturbeli;
         String tgl_masuk;
-        //ArrayList<Produk> daftarProduk = new ArrayList<>();
+        ArrayList<Produk> daftarProduk = new ArrayList<>();
         ArrayList<DetailFaktur> detailFaktur= new ArrayList<>();
 
 
@@ -26,6 +26,11 @@ public class DetailFaktur extends FakturBeli {
             return total;
         }
         public void print() {
+
+            for(Produk produk : daftarProduk.get()){
+                produk.print();
+                System.out.println();
+            }
             System.out.println("No. Faktur Beli : "+no_fakturbeli);
             System.out.println("Jumlah Faktur Beli : "+jumlah_fakturbeli);
             System.out.println("Tanggal Masuk : "+tgl_masuk);
