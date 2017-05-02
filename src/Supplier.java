@@ -17,7 +17,11 @@ public class Supplier {
     }
 
     public void print(){
-        System.out.println();
+
+        System.out.println("Nama Supplier: "+namaSupplier);
+        System.out.println("Alamat Supplier: "+alamat);
+        System.out.println("Email Supplier: "+email);
+        System.out.println("No. HP Supplier: "+noHP);
     }
 
     public static void main(String[] args){
