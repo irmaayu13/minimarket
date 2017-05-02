@@ -7,7 +7,7 @@ public class ReturBeli {
     String ket_returbeli;
     int jumlah_retur;
 
-    public double totalReturBeli{
+    public double totalReturBeli(){
         int total=0;
         return total+jumlah_retur;
     }
