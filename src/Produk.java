@@ -1,17 +1,25 @@
+import javafx.collections.ObservableArray;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
  * Created by jordh on 4/12/2017.
  */
 public abstract class Produk {
+   Makanan makanan;
+   Minuman minuman;
+   Obat obat;
+   Sembako sembako;
 
-//    public abstract void addStock();
+    //public abstract void addStock();
     public abstract double hitungJumlahProduk();
     public abstract double hargaBeli();
     public abstract double hargaJual();
-
-
     public abstract void print();
+
+
+
 //    int idProduk;
 //    String namaProduk;
 //    String jenisProduk;

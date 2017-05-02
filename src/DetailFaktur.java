@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- *
+ *Created by Toshiba
  */
 public class DetailFaktur extends FakturBeli {
         String no_fakturbeli;
@@ -10,17 +10,11 @@ public class DetailFaktur extends FakturBeli {
         ArrayList<Produk> daftarProduk = new ArrayList<>();
         ArrayList<DetailFaktur> detailFaktur= new ArrayList<>();
 
-
-        public DetailFaktur(String no_fakturbeli, int jumlah_fakturbeli, String tgl_masuk){
-            this.no_fakturbeli=no_fakturbeli;
-            this.jumlah_fakturbeli=jumlah_fakturbeli;
-            this.tgl_masuk=tgl_masuk;
-        }
-
-    public DetailFaktur(String no_fakturbeli, int) {
-
+    public DetailFaktur(String no_fakturbeli, int jumlah_fakturbeli, String tgl_masuk) {
+        this.no_fakturbeli=no_fakturbeli;
+        this.jumlah_fakturbeli=jumlah_fakturbeli;
+        this.tgl_masuk=tgl_masuk;
     }
-
     @Override
         public double totalFakturbeli() {
             int total=0;
@@ -37,11 +31,9 @@ public class DetailFaktur extends FakturBeli {
             System.out.println("No. Faktur Beli : "+no_fakturbeli);
             System.out.println("Jumlah Faktur Beli : "+jumlah_fakturbeli);
             System.out.println("Tanggal Masuk : "+tgl_masuk);
-
         }
         public static void main(String[] Args){
-            DetailFaktur dfb = new DetailFaktur()
-            dfb=new DetailFaktur("FB001", 12, "05-05-2017")
+            DetailFaktur dfb = new DetailFaktur("F001", 12, "02-04-2017");
             dfb.print();
             System.out.println("Total Faktur :"+dfb.totalFakturbeli());
         }
