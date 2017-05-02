@@ -42,17 +42,6 @@ public class Makanan extends Produk {
         System.out.println("Jumlah Harga Beli: "+hargaBeli());
         System.out.println("Jumlah Harga Jual: "+hargaJual());
     }
-    public double hitungMakanan(){
-        double hitungmakanan;
-        hitungmakanan = stock * harga;
-
-        return hitungmakanan;
-    }
-    public static void main(String[] Args){
-
-
-    }
-
 
     public void inputMakanan(){
         Makanan mk;

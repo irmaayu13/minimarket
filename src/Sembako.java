@@ -17,8 +17,6 @@ public class Sembako extends Produk {
         Sembako.put(mk.idProduk,mk);
     }
 
-
-
     public Sembako(int idProduk, String namaSembako, String jenisSembako, int hargabeli, int stock,int hargajual){
         this.idProduk = idProduk;
         this.namaSembako = namaSembako;

@@ -60,7 +60,7 @@ public class Minuman extends Produk {
     }
 
     @Override
-    public double hargaBeli() {
+    public double hargaBeli(){
         double total = 0;
         total = total + hargabeli;
         return total;
