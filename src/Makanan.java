@@ -17,8 +17,6 @@ public class Makanan extends Produk {
         Makanan.put(mk.idProduk,mk);
     }
 
-
-
     public Makanan(int idProduk, String namaMakanan, String jenisMakanan, int hargabeli, int stock,int hargajual){
         this.idProduk = idProduk;
         this.namaMakanan = namaMakanan;
