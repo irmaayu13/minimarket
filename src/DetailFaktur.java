@@ -7,7 +7,7 @@ public class DetailFaktur extends FakturBeli {
         String no_fakturbeli;
         int jumlah_fakturbeli;
         String tgl_masuk;
-        ArrayList<Produk> daftarProduk = new ArrayList<>();
+        //ArrayList<Produk> daftarProduk = new ArrayList<>();
         ArrayList<DetailFaktur> detailFaktur= new ArrayList<>();
 
 
