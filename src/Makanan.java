@@ -15,5 +15,16 @@ public class Makanan {
         this.stock = stock;
         this.harga = harga;
     }
+    public double hitungMakanan(){
+        double hitungmakanan;
+        hitungmakanan = stock * harga;
+
+        return hitungmakanan;
+    }
+    public static void main(String[] Args){
+
+
+    }
+
 
 }

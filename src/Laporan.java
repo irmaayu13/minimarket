@@ -8,7 +8,7 @@ public class Laporan {
     HashMap<Integer,Produk> daftarProduk = new HashMap<>();
     ArrayList<ReturBeli> daftarRetur = new ArrayList<>();
     ArrayList<FakturBeli> daftarFaktur = new ArrayList<>();
-    ArrayList<bill> daftarBill = new ArrayList<>();
+    ArrayList<Bill> daftarBill = new ArrayList<>();
 
     int id_laporan;
     String tgl_laporan;
