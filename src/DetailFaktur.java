@@ -17,7 +17,11 @@ public class DetailFaktur extends FakturBeli {
             this.tgl_masuk=tgl_masuk;
         }
 
-        @Override
+    public DetailFaktur(String no_fakturbeli, int) {
+
+    }
+
+    @Override
         public double totalFakturbeli() {
             int total=0;
             for (DetailFaktur dfb : detailFaktur){
@@ -26,7 +30,6 @@ public class DetailFaktur extends FakturBeli {
             return total;
         }
         public void print() {
-
             for(Produk produk : daftarProduk.get()){
                 produk.print();
                 System.out.println();
@@ -36,8 +39,9 @@ public class DetailFaktur extends FakturBeli {
             System.out.println("Tanggal Masuk : "+tgl_masuk);
 
         }
-        public static void main(String[] args){
-            DetailFaktur dfb = new DetailFaktur("FB001",250,"02-04-2017");
+        public static void main(String[] Args){
+            DetailFaktur dfb = new DetailFaktur()
+            dfb=new DetailFaktur("FB001", 12, "05-05-2017")
             dfb.print();
             System.out.println("Total Faktur :"+dfb.totalFakturbeli());
         }
