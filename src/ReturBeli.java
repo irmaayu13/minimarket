@@ -11,6 +11,4 @@ public class ReturBeli {
         int total=0;
         return total+jumlah_retur;
     }
-
-
 }

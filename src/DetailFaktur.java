@@ -3,10 +3,7 @@ import java.util.ArrayList;
 /**
  *
  */
-public class DetailFaktur {
-    import java.util.ArrayList;
-
-    public class detailFakturBeli extends FakturBeli {
+public class DetailFaktur extends FakturBeli {
         String no_fakturbeli;
         int jumlah_fakturbeli;
         String tgl_masuk;
@@ -25,18 +22,14 @@ public class DetailFaktur {
             return total+jumlah_fakturbeli;
 
         }
-
-
         public void print() {
             System.out.println("No. Faktur Beli : "+no_fakturbeli);
             System.out.println("Jumlah Faktur Beli : "+jumlah_fakturbeli);
             System.out.println("Tanggal Masuk : "+tgl_masuk);
 
         }
-
         public static void main(String[] args){
-            detailFakturBeli dfb = new detailFakturBeli("FB001",250,"02-04-2017");
+            DetailFaktur dfb = new DetailFaktur("FB001",250,"02-04-2017");
             dfb.print();
         }
-    }
 }
