@@ -18,10 +18,6 @@ public class Billing {
 
     ArrayList<Produk> daftarProduk = new ArrayList<>();
 
-    public void tambahproduk(Produk produk){
-        daftarProduk.add(produk);
-    }
-
     public Billing(String idbill,int idpetugas, String tgl_transaksi, Makanan mkn, Minuman mi, Obat ob, Sembako sm) {
         this.idbill=idbill;
         this.kuantitas=kuantitas;
@@ -34,7 +30,6 @@ public class Billing {
     }
 
     public void addProduk(Produk p) {
-        //tambah produk ke array
         daftarProduk.add(p);
     }
 
