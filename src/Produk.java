@@ -12,7 +12,7 @@ public abstract class Produk {
    Obat obat;
    Sembako sembako;
 
-    //public abstract void addStock();
+    public abstract double hitungKeuntungan();
     public abstract double hitungJumlahProduk();
     public abstract double hargaBeli();
     public abstract double hargaJual();

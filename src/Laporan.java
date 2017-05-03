@@ -12,5 +12,20 @@ public class Laporan {
 
     int id_laporan;
     String tgl_laporan;
+//    public double totalJual(){
+//        double total=0;
+//        for (Produk p : daftarProduk){
+//            total = total +p.hargaJual();
+//        }
+//        return total;
+//    }
+//
+//    public double totalKeuntungan(){
+//        double total=0;
+//        for (Produk p : daftarProduk){
+//            total = total +p.hargaBeli();
+//        }
+//        return total;
+//    }
 
 }

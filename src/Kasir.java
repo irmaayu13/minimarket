@@ -8,12 +8,20 @@ public class Kasir extends Petugas {
     String alamat;
     String no_hp;
 
-public Kasir(int id_kasir, String nama_kasir, String jk, String alamat, String no_hp){
-        super();
-        this.id_kasir=id_kasir;
-        this.nama_kasir=nama_kasir;
-        this.jk=jk;
-        this.alamat=alamat;
-        this.no_hp=no_hp
+//public Kasir(int id_kasir, String nama_kasir, String jk, String alamat, String no_hp){
+////        super();
+//        this.id_kasir=id_kasir;
+//        this.nama_kasir=nama_kasir;
+//        this.jk=jk;
+//        this.alamat=alamat;
+//        this.no_hp=no_hp;
+//    }
+
+    public Kasir(int idPetugas, String namaPetugas, String jabatan, String jenisKelamin, String namaAkun, String password) {
+        super(idPetugas, namaPetugas, jabatan, jenisKelamin, namaAkun, password);
+    }
+
+    public static void main(String[] args){
+
     }
 }

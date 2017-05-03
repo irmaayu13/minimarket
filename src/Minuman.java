@@ -13,9 +13,9 @@ public class Minuman extends Produk {
 
     private HashMap<Integer,Minuman> Minuman = new HashMap<>();
 
-    public void addStock(Minuman mk) {
-        Minuman.put(mk.idProduk,mk);
-    }
+//    public void addStock(Minuman mk) {
+//        Minuman.put(mk.idProduk,mk);
+//    }
 
 
 
@@ -28,9 +28,9 @@ public class Minuman extends Produk {
         this.hargajual = hargajual;
     }
 
-    public Minuman cariBarang(int idProduk) {
-        return Minuman.get(idProduk);
-    }
+//    public Minuman cariBarang(int idProduk) {
+//        return Minuman.get(idProduk);
+//    }
 
     @Override
     public void print() {
@@ -38,47 +38,48 @@ public class Minuman extends Produk {
         System.out.println("Harga Beli: "+hargabeli);
         System.out.println("Harga Jual: "+hargajual);
         System.out.println("Stok: "+stock);
-        System.out.println("Jumlah Stok: "+hitungJumlahProduk());
-        System.out.println("Jumlah Harga Beli: "+hargaBeli());
-        System.out.println("Jumlah Harga Jual: "+hargaJual());
+        System.out.println("Jumlah Keuntungan: "+hitungKeuntungan());
+//        System.out.println("Jumlah Harga Beli: "+hargaBeli());
+//        System.out.println("Jumlah Harga Jual: "+hargaJual());
     }
 
-    public void inputMinuman(){
-        Minuman mk;
+//    public void inputMinuman(){
+//        Minuman mk;
+//
+//        mk = new Minuman( 1, "Ultramilk","Susu",2000,10,2300);
+//        addStock(mk);
+//        mk = new Minuman( 2, "Teh Kotak","Teh",3500,20,4500);
+//        addStock(mk);
+//    }
 
-        mk = new Minuman( 1, "Ultramilk","Susu",2000,10,2300);
-        addStock(mk);
-        mk = new Minuman( 2, "Teh Kotak","Teh",3500,20,4500);
-        addStock(mk);
+    @Override
+    public double hitungKeuntungan() {
+        double untung=0;
+        untung=(hargajual-hargabeli)*stock;
+        return untung;
     }
 
     @Override
     public double hitungJumlahProduk() {
-        double total = 0;
-        total = total + stock;
-        return total;
+        return stock;
     }
 
     @Override
     public double hargaBeli(){
-        double total = 0;
-        total = total + hargabeli;
-        return total;
+        return hargabeli;
     }
 
     @Override
     public double hargaJual() {
-        double total = 0;
-        total = total + hargajual;
-        return total;
+        return hargajual;
     }
 
     public static void main(String[] args) {
-        Minuman dataMinuman = new Minuman(1, "null","null",0,0,0);
-        dataMinuman.inputMinuman();
+        Minuman dataMinuman = new Minuman(1, "Ultramilk","Susu",2000,10,2300);
+//        dataMinuman.inputMinuman();
         dataMinuman.print();
-        Minuman pr = dataMinuman.cariBarang(2);
-        pr.print();
+//        Minuman pr = dataMinuman.cariBarang(2);
+//        pr.print();
 //        pr.);
     }
 
