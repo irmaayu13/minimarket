@@ -11,14 +11,27 @@ public abstract class Produk {
    Minuman minuman;
    Obat obat;
    Sembako sembako;
+    int stock;
+    int hargabeli;
+    int hargajual;
+    int kuantitas;
+    int totalproduk;
 
-    public abstract double hitungKeuntungan();
+
+    public double hitungKeuntungan() {
+        double untung=0;
+        untung=(hargajual-hargabeli)*stock;
+        return untung;
+    }
+    //public abstract double hitungKeuntungan();
     public abstract double hitungJumlahProduk();
     public abstract double hargaBeli();
     public abstract double hargaJual();
     public abstract void print();
     public abstract void printbill();
     public abstract int totalbayarproduk();
+
+
 
 
 //    int idProduk;
