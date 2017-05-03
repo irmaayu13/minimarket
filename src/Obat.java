@@ -10,6 +10,8 @@ public class Obat extends Produk{
     int stock;
     int hargabeli;
     int hargajual;
+    int kuantitas;
+    int totalproduk;
 
     private HashMap<Integer,Obat> Obat = new HashMap<>();
 
@@ -26,6 +28,15 @@ public class Obat extends Produk{
         this.stock = stock;
         this.hargabeli = hargabeli;
         this.hargajual = hargajual;
+    }
+
+    public Obat(int idProduk, String namaObat, String jenisObat, int kuantitas,int hargajual){
+        this.idProduk = idProduk;
+        this.namaObat = namaObat;
+        this.jenisObat = jenisObat;
+        this.kuantitas = kuantitas;
+        this.hargajual = hargajual;
+        this.totalproduk = hargajual*kuantitas;
     }
 
 //    public Obat cariBarang(int idProduk) {
@@ -51,6 +62,19 @@ public class Obat extends Produk{
 //        mk = new Obat( 2, "Entrostop","Sakit Perut",3500,20,4500);
 //        addStock(mk);
 //    }
+@Override
+    public void printbill() {
+        System.out.println("Nama Produk: "+namaObat);
+        System.out.println("Harga Jual: "+hargajual);
+        System.out.println("Kuantitas: "+kuantitas);
+        System.out.println("Total Bayar Produk: "+totalproduk);
+    }
+
+    @Override
+    public int totalbayarproduk() {
+        this.totalproduk=hargajual*kuantitas;
+        return totalproduk;
+    }
 
     @Override
     public double hitungKeuntungan() {

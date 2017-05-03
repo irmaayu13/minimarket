@@ -10,6 +10,8 @@ public class Sembako extends Produk {
     int stock;
     int hargabeli;
     int hargajual;
+    int kuantitas;
+    int totalproduk;
 
     private HashMap<Integer,Sembako> Sembako = new HashMap<>();
 
@@ -26,9 +28,31 @@ public class Sembako extends Produk {
         this.hargajual = hargajual;
     }
 
+    public Sembako(int idProduk, String namaSembako, String jenisSembako, int kuantitas,int hargajual){
+        this.idProduk = idProduk;
+        this.namaSembako = namaSembako;
+        this.jenisSembako = jenisSembako;
+        this.kuantitas = kuantitas;
+        this.hargajual = hargajual;
+        this.totalproduk = hargajual*kuantitas;
+    }
+
 //    public Sembako cariBarang(int idProduk) {
 //        return Sembako.get(idProduk);
 //    }
+    @Override
+    public void printbill() {
+        System.out.println("Nama Produk: "+namaSembako);
+        System.out.println("Harga Jual: "+hargajual);
+        System.out.println("Kuantitas: "+kuantitas);
+        System.out.println("Total Bayar Produk: "+totalproduk);
+    }
+
+    @Override
+    public int totalbayarproduk() {
+        this.totalproduk=hargajual*kuantitas;
+        return totalproduk;
+    }
 
     @Override
     public void print() {

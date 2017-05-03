@@ -10,6 +10,8 @@ public class Minuman extends Produk {
     int stock;
     int hargabeli;
     int hargajual;
+    int kuantitas;
+    int totalproduk;
 
     private HashMap<Integer,Minuman> Minuman = new HashMap<>();
 
@@ -28,6 +30,15 @@ public class Minuman extends Produk {
         this.hargajual = hargajual;
     }
 
+    public Minuman(int idProduk, String namaMinuman, String jenisMinuman, int kuantitas,int hargajual){
+        this.idProduk = idProduk;
+        this.namaMinuman = namaMinuman;
+        this.jenisMinuman = jenisMinuman;
+        this.kuantitas = kuantitas;
+        this.hargajual = hargajual;
+        this.totalproduk = hargajual*kuantitas;
+    }
+
 //    public Minuman cariBarang(int idProduk) {
 //        return Minuman.get(idProduk);
 //    }
@@ -41,6 +52,20 @@ public class Minuman extends Produk {
         System.out.println("Jumlah Keuntungan: "+hitungKeuntungan());
 //        System.out.println("Jumlah Harga Beli: "+hargaBeli());
 //        System.out.println("Jumlah Harga Jual: "+hargaJual());
+    }
+
+    @Override
+    public void printbill() {
+        System.out.println("Nama Produk: "+namaMinuman);
+        System.out.println("Harga Jual: "+hargajual);
+        System.out.println("Kuantitas: "+kuantitas);
+        System.out.println("Total Bayar Produk: "+totalproduk);
+    }
+
+    @Override
+    public int totalbayarproduk() {
+        this.totalproduk=hargajual*kuantitas;
+        return totalproduk;
     }
 
 //    public void inputMinuman(){

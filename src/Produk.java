@@ -17,7 +17,8 @@ public abstract class Produk {
     public abstract double hargaBeli();
     public abstract double hargaJual();
     public abstract void print();
-
+    public abstract void printbill();
+    public abstract int totalbayarproduk();
 
 
 //    int idProduk;
